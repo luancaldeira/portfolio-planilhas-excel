@@ -2,6 +2,8 @@ import { getModel, modelIds } from "./models.js";
 
 const tabs = [...document.querySelectorAll("[data-model-tab]")];
 const fields = [...document.querySelectorAll("[data-model-field]")];
+const workspaceFields = [...document.querySelectorAll("[data-workspace-field]")];
+const workspaceButtons = [...document.querySelectorAll("[data-workspace-model]")];
 const workbookLink = document.querySelector("#open-workbook");
 const showcase = document.querySelector("#showcase");
 
@@ -44,12 +46,22 @@ function selectModel(id, { focus = false, animate = false } = {}) {
   const model = getModel(selectedId);
   document.body.dataset.activeModel = selectedId;
   if (workbookLink) workbookLink.href = model.file;
-  fields.forEach((field) => renderField(field, getFieldValue(model, field.dataset.modelField), model));
+  fields.forEach((field) => {
+    renderField(field, getFieldValue(model, field.dataset.modelField), model);
+  });
+
+  workspaceFields.forEach((field) => {
+    const value = getFieldValue(model, field.dataset.workspaceField);
+    if (value !== undefined && value !== null) field.textContent = value;
+  });
   tabs.forEach((tab) => {
     const isSelected = tab.dataset.modelTab === selectedId;
     tab.setAttribute("aria-selected", String(isSelected));
     tab.tabIndex = isSelected ? 0 : -1;
     if (isSelected && focus) tab.focus();
+  });
+  workspaceButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.workspaceModel === selectedId));
   });
   const selectedTab = tabs.find((tab) => tab.dataset.modelTab === selectedId);
   if (showcase && selectedTab?.id) showcase.setAttribute("aria-labelledby", selectedTab.id);
@@ -66,6 +78,10 @@ tabs.forEach((tab) => {
     const nextIndex = (currentIndex + direction + tabs.length) % tabs.length;
     selectModel(tabs[nextIndex].dataset.modelTab, { focus: true, animate: true });
   });
+});
+
+workspaceButtons.forEach((button) => {
+  button.addEventListener("click", () => selectModel(button.dataset.workspaceModel, { animate: true }));
 });
 
 showcase?.addEventListener("animationend", (event) => {
