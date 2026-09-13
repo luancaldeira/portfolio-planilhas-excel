@@ -35,15 +35,15 @@
           <h2 id="models-title">Modelos para cada decisão</h2>
         </div>
         <div class="model-tabs" role="tablist" aria-label="Selecionar modelo">
-          <button data-model-tab="financial" role="tab" aria-selected="true" aria-controls="showcase">Financeiro</button>
-          <button data-model-tab="sales" role="tab" aria-selected="false" aria-controls="showcase">Vendas</button>
-          <button data-model-tab="marketing" role="tab" aria-selected="false" aria-controls="showcase">Marketing</button>
-          <button data-model-tab="inventory" role="tab" aria-selected="false" aria-controls="showcase">Estoque</button>
-          <button data-model-tab="projects" role="tab" aria-selected="false" aria-controls="showcase">Projetos</button>
+          <button id="model-tab-financial" data-model-tab="financial" role="tab" aria-selected="true" aria-controls="showcase">Financeiro</button>
+          <button id="model-tab-sales" data-model-tab="sales" role="tab" aria-selected="false" aria-controls="showcase">Vendas</button>
+          <button id="model-tab-marketing" data-model-tab="marketing" role="tab" aria-selected="false" aria-controls="showcase">Marketing</button>
+          <button id="model-tab-inventory" data-model-tab="inventory" role="tab" aria-selected="false" aria-controls="showcase">Estoque</button>
+          <button id="model-tab-projects" data-model-tab="projects" role="tab" aria-selected="false" aria-controls="showcase">Projetos</button>
         </div>
       </section>
 
-      <section class="showcase" id="showcase" aria-live="polite" aria-labelledby="showcase-title">
+      <section class="showcase" id="showcase" role="tabpanel" aria-live="polite" aria-labelledby="model-tab-financial">
         <div class="showcase-copy">
           <p class="eyebrow" id="showcase-category" data-model-field="eyebrow">Modelo financeiro</p>
           <h2 id="showcase-title" data-model-field="title">Forecast financeiro</h2>
