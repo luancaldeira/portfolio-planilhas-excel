@@ -54,3 +54,11 @@ test("catalog is an interactive in-page model explorer instead of a download wal
   assert.match(html, /id="workspace-sheet"/);
   assert.match(html, /id="workspace-table"/);
 });
+
+test("page loads a versioned interactive module for fresh public deployments", async () => {
+  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const app = await readFile(new URL("../app.js", import.meta.url), "utf8");
+
+  assert.match(html, /<script type="module" src="app\.js\?v=[a-z0-9]+">/);
+  assert.match(app, /from "\.\/models\.js\?v=[a-z0-9]+"/);
+});

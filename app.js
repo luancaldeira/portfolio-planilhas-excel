@@ -1,4 +1,4 @@
-import { getModel, modelIds } from "./models.js";
+import { getModel, modelIds } from "./models.js?v=588151c";
 
 const tabs = [...document.querySelectorAll("[data-model-tab]")];
 const fields = [...document.querySelectorAll("[data-model-field]")];
