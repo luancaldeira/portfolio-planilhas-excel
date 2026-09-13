@@ -24,8 +24,8 @@ function renderField(field, value, model) {
       const angle = Math.atan2(-rise, run) * (180 / Math.PI);
       const length = Math.hypot(run, rise);
 
-      field.style.setProperty("--segment-angle", `${angle}deg`);
-      field.style.setProperty("--segment-length", `${length}px`);
+      field.style.setProperty("--segment-angle", String(angle) + "deg");
+      field.style.setProperty("--segment-length", String(length) + "px");
     }
     return;
   }
@@ -64,6 +64,9 @@ function selectModel(id, { focus = false, animate = false } = {}) {
     tab.tabIndex = isSelected ? 0 : -1;
     if (isSelected && focus) tab.focus();
   });
+
+  const selectedTab = tabs.find((tab) => tab.dataset.modelTab === selectedId);
+  if (showcase && selectedTab?.id) showcase.setAttribute("aria-labelledby", selectedTab.id);
 
   if (animate) restartShowcaseMotion();
 }
