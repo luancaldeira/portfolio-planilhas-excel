@@ -1,6 +1,8 @@
 # Portfólio de Planilhas Excel
 
-Modelos interativos para apoiar decisões financeiras, comerciais e operacionais. Todos os arquivos usam dados fictícios, criados apenas para demonstração.
+Cinco modelos interativos para apoiar decisões financeiras, comerciais e operacionais. Todos os arquivos usam dados fictícios, criados apenas para demonstração.
+
+Veja a vitrine interativa em `https://luancaldeira.github.io/portfolio-planilhas-excel/`.
 
 ## Projetos
 
