@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Modelos de planilhas Excel prontos para decisões financeiras, comerciais e operacionais.">
+    <title>Modelos Excel para decisões melhores</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Portfólio de planilhas Excel">PLANILHAS<span>+</span></a>
+      <nav aria-label="Navegação principal">
+        <a href="#models">Modelos</a>
+        <a href="#catalog">Catálogo</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true">
+          <span class="grid-label grid-label-a">A</span><span class="grid-label grid-label-b">B</span><span class="grid-label grid-label-c">C</span>
+          <span class="grid-row grid-row-1">01</span><span class="grid-row grid-row-2">02</span><span class="grid-row grid-row-3">03</span>
+          <span class="hero-active-cell"></span><span class="hero-grid-line"></span>
+        </div>
+        <p class="eyebrow">Decisões mais claras, em uma planilha</p>
+        <h1 id="hero-title">Transforme números em próximos passos.</h1>
+        <p class="hero-lede">Modelos Excel práticos para visualizar cenários, acompanhar resultados e planejar com segurança.</p>
+        <a class="button button-primary" href="#models">Explorar modelos <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="model-switcher" id="models" aria-labelledby="models-title">
+        <div class="section-heading">
+          <p class="eyebrow">Escolha um ponto de partida</p>
+          <h2 id="models-title">Modelos para cada decisão</h2>
+        </div>
+        <div class="model-tabs" role="tablist" aria-label="Selecionar modelo">
+          <button data-model-tab="financial" role="tab" aria-selected="true" aria-controls="showcase">Financeiro</button>
+          <button data-model-tab="sales" role="tab" aria-selected="false" aria-controls="showcase">Vendas</button>
+          <button data-model-tab="marketing" role="tab" aria-selected="false" aria-controls="showcase">Marketing</button>
+          <button data-model-tab="inventory" role="tab" aria-selected="false" aria-controls="showcase">Estoque</button>
+          <button data-model-tab="projects" role="tab" aria-selected="false" aria-controls="showcase">Projetos</button>
+        </div>
+      </section>
+
+      <section class="showcase" id="showcase" aria-live="polite" aria-labelledby="showcase-title">
+        <div class="showcase-copy">
+          <p class="eyebrow" id="showcase-category" data-model-field="eyebrow">Modelo financeiro</p>
+          <h2 id="showcase-title" data-model-field="title">Forecast financeiro</h2>
+          <p id="showcase-description" data-model-field="summary">Antecipe receitas, custos e caixa com cenários que tornam o planejamento mais objetivo.</p>
+          <ol class="showcase-steps">
+            <li data-model-field="steps.0">Defina receitas e custos</li>
+            <li data-model-field="steps.1">Compare cenários</li>
+            <li data-model-field="steps.2">Planeje o caixa</li>
+          </ol>
+          <dl class="showcase-metrics">
+            <div><dt data-model-field="metrics.0.label">receita projetada</dt><dd data-model-field="metrics.0.value">R$ 482.600</dd></div>
+            <div><dt data-model-field="metrics.1.label">horizonte de análise</dt><dd data-model-field="metrics.1.value">18 meses</dd></div>
+            <div><dt data-model-field="metrics.2.label">para decidir com clareza</dt><dd data-model-field="metrics.2.value">3 cenários</dd></div>
+          </dl>
+          <a class="button button-dark" id="open-workbook" href="01_financial-forecast.xlsx">Abrir modelo no Excel <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="model-preview" aria-label="Prévia do modelo financeiro" data-model-field="visual.ariaLabel">
+          <div class="preview-topline"><span data-model-field="visual.topline.0">VISÃO GERAL</span><span data-model-field="visual.topline.1">2025 / 2026</span></div>
+          <div class="preview-value"><span data-model-field="visual.value">R$ 482.600</span> <small data-model-field="visual.label">receita projetada</small></div>
+          <div class="preview-chart" aria-hidden="true"><span data-model-field="visual.bars.0"></span><span data-model-field="visual.bars.1"></span><span data-model-field="visual.bars.2"></span><span data-model-field="visual.bars.3"></span><span data-model-field="visual.bars.4"></span><span data-model-field="visual.bars.5"></span><span data-model-field="visual.bars.6"></span></div>
+          <div class="preview-legend"><span><i class="legend-dot legend-dot-accent"></i><span data-model-field="visual.legend.0">Realizado</span></span><span><i class="legend-dot"></i><span data-model-field="visual.legend.1">Projetado</span></span></div>
+        </div>
+      </section>
+
+      <section class="catalog" id="catalog" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <p class="eyebrow">Catálogo completo</p>
+          <h2 id="catalog-title">Cinco formas de ganhar visibilidade</h2>
+        </div>
+        <div class="catalog-grid">
+          <a class="catalog-card" href="01_financial-forecast.xlsx"><span class="card-number">01</span><h3>Forecast financeiro</h3><p>Planeje receitas, custos e fluxo de caixa.</p><span class="card-link">Abrir modelo ↗</span></a>
+          <a class="catalog-card" href="02_sales-pipeline.xlsx"><span class="card-number">02</span><h3>Pipeline comercial</h3><p>Priorize oportunidades e projete comissões.</p><span class="card-link">Abrir modelo ↗</span></a>
+          <a class="catalog-card" href="03_marketing-performance.xlsx"><span class="card-number">03</span><h3>Performance de marketing</h3><p>Compare canais, CPL e retorno das campanhas.</p><span class="card-link">Abrir modelo ↗</span></a>
+          <a class="catalog-card" href="04_inventory-planning.xlsx"><span class="card-number">04</span><h3>Planejamento de estoque</h3><p>Evite rupturas com alertas de reposição.</p><span class="card-link">Abrir modelo ↗</span></a>
+          <a class="catalog-card" href="05_project-budget.xlsx"><span class="card-number">05</span><h3>Orçamento de projeto</h3><p>Acompanhe o previsto, o realizado e as variações.</p><span class="card-link">Abrir modelo ↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Modelos simples para decisões que pedem clareza.</p>
+      <p>Dados fictícios para demonstração.</p>
+    </footer>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
