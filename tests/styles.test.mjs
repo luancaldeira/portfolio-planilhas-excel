@@ -17,7 +17,8 @@ test("styles define the approved workbook palette and selected states", async ()
     assert.match(css, new RegExp(color));
   }
   assert.match(css, /\[aria-selected="true"\]/);
-  assert.match(css, /\.workspace-picker button\[aria-pressed="true"\]/);
+  assert.match(css, /@media \(min-width: 701px\) \{\s*h1 \{ white-space: nowrap; \}/);
+  assert.doesNotMatch(css, /\.model-workspace/);
 });
 
 test("motion is limited to model-selection feedback", async () => {

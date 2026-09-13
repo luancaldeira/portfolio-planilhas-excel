@@ -45,20 +45,21 @@ test("model tabs label the active showcase panel", async () => {
   );
 });
 
-test("catalog is an interactive in-page model explorer instead of a download wall", async () => {
+test("page removes the redundant explorer after the main showcase", async () => {
   const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 
   assert.doesNotMatch(html, /class="hero-grid"/);
-  assert.match(html, /class="model-workspace" id="catalog"/);
-  assert.equal((html.match(/data-workspace-model/g) ?? []).length, 5);
-  assert.match(html, /id="workspace-sheet"/);
-  assert.match(html, /id="workspace-table"/);
+  assert.doesNotMatch(html, /class="model-workspace"/);
+  assert.doesNotMatch(html, /data-workspace-model/);
+  assert.doesNotMatch(html, /href="#catalog"/);
+  assert.doesNotMatch(html, /id="catalog"/);
 });
 
 test("page loads a versioned interactive module for fresh public deployments", async () => {
   const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
   const app = await readFile(new URL("../app.js", import.meta.url), "utf8");
 
+  assert.match(html, /<link rel="stylesheet" href="styles\.css\?v=[a-z0-9]+">/);
   assert.match(html, /<script type="module" src="app\.js\?v=[a-z0-9]+">/);
   assert.match(app, /from "\.\/models\.js\?v=[a-z0-9]+"/);
 });

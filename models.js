@@ -18,11 +18,6 @@ export const models = {
       bars: [30, 45, 38, 62, 55, 78, 91],
       legend: ["Realizado", "Projetado"],
     },
-    workspace: {
-      sheet: "Fluxo de caixa",
-      headers: ["Mês", "Receita", "Saldo"],
-      rows: [["Jan", "R$ 38.200", "R$ 74.600"], ["Fev", "R$ 41.500", "R$ 81.900"], ["Mar", "R$ 46.300", "R$ 92.400"]],
-    },
   },
   sales: {
     title: "Pipeline comercial",
@@ -42,11 +37,6 @@ export const models = {
       label: "em oportunidades",
       bars: [88, 72, 58, 43, 31, 24, 16],
       legend: ["Entrada", "Fechamento"],
-    },
-    workspace: {
-      sheet: "Pipeline ativo",
-      headers: ["Etapa", "Negócios", "Valor"],
-      rows: [["Proposta", "14", "R$ 118.000"], ["Negociação", "9", "R$ 84.000"], ["Fechamento", "5", "R$ 46.000"]],
     },
   },
   marketing: {
@@ -68,11 +58,6 @@ export const models = {
       bars: [35, 52, 48, 67, 73, 69, 86],
       legend: ["Investimento", "Retorno"],
     },
-    workspace: {
-      sheet: "Canais e retorno",
-      headers: ["Canal", "CPL", "Retorno"],
-      rows: [["Busca", "R$ 32,10", "4,8x"], ["Social", "R$ 41,20", "3,9x"], ["E-mail", "R$ 18,80", "6,1x"]],
-    },
   },
   inventory: {
     title: "Planejamento de estoque",
@@ -93,11 +78,6 @@ export const models = {
       bars: [76, 64, 82, 51, 68, 42, 57],
       legend: ["Estoque atual", "Nível ideal"],
     },
-    workspace: {
-      sheet: "Reposição",
-      headers: ["Item", "Atual", "Ação"],
-      rows: [["Linha A", "9 dias", "Repor"], ["Linha B", "28 dias", "Monitorar"], ["Linha C", "12 dias", "Repor"]],
-    },
   },
   projects: {
     title: "Orçamento de projeto",
@@ -117,11 +97,6 @@ export const models = {
       label: "orçamento total",
       bars: [22, 39, 47, 54, 63, 76, 84],
       legend: ["Planejado", "Realizado"],
-    },
-    workspace: {
-      sheet: "Orçamento por etapa",
-      headers: ["Entrega", "Previsto", "Realizado"],
-      rows: [["Planejamento", "R$ 24.000", "R$ 22.800"], ["Execução", "R$ 88.000", "R$ 91.400"], ["Finalização", "R$ 31.000", "R$ 29.600"]],
     },
   },
 };

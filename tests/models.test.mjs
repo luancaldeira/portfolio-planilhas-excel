@@ -12,14 +12,3 @@ test("each workbook has a complete showcase record", () => {
     assert.ok(model.metrics.every(({ value }) => value.length > 0));
   }
 });
-
-test("each model can be explored through an in-page worksheet preview", () => {
-  for (const id of modelIds) {
-    const model = getModel(id);
-
-    assert.match(model.workspace.sheet, /.+/);
-    assert.equal(model.workspace.headers.length, 3);
-    assert.equal(model.workspace.rows.length, 3);
-    assert.equal(model.workspace.rows.every((row) => row.length === 3), true);
-  }
-});

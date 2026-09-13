@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Modelos de planilhas Excel prontos para decisões financeiras, comerciais e operacionais.">
     <title>Modelos Excel para decisões melhores</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=hero20260913">
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Portfólio de planilhas Excel">PLANILHAS<span>+</span></a>
       <nav aria-label="Navegação principal">
         <a href="#models">Modelos</a>
-        <a href="#catalog">Catálogo</a>
       </nav>
     </header>
 
@@ -64,41 +63,6 @@
         </div>
       </section>
 
-      <section class="model-workspace" id="catalog" aria-labelledby="workspace-title">
-        <div class="section-heading">
-          <h2 id="workspace-title">Explore cada modelo por dentro</h2>
-          <p>Escolha uma área para ver como os dados se organizam e quais decisões cada planilha ajuda a tomar.</p>
-        </div>
-        <div class="workspace-layout">
-          <div class="workspace-picker" aria-label="Escolher prévia de modelo">
-            <button id="workspace-financial" data-workspace-model="financial" aria-pressed="true"><span>01</span> Financeiro</button>
-            <button id="workspace-sales" data-workspace-model="sales" aria-pressed="false"><span>02</span> Vendas</button>
-            <button id="workspace-marketing" data-workspace-model="marketing" aria-pressed="false"><span>03</span> Marketing</button>
-            <button id="workspace-inventory" data-workspace-model="inventory" aria-pressed="false"><span>04</span> Estoque</button>
-            <button id="workspace-projects" data-workspace-model="projects" aria-pressed="false"><span>05</span> Projetos</button>
-          </div>
-          <article class="workspace-sheet" id="workspace-sheet" aria-live="polite" aria-labelledby="workspace-model-title">
-            <div class="workspace-sheet-bar">
-              <span data-workspace-field="workspace.sheet">Fluxo de caixa</span>
-              <span>Visão demonstrativa</span>
-            </div>
-            <div class="workspace-sheet-copy">
-              <h3 id="workspace-model-title" data-workspace-field="title">Forecast financeiro</h3>
-              <p data-workspace-field="summary">Antecipe receitas, custos e caixa com cenários que tornam o planejamento mais objetivo.</p>
-            </div>
-            <div class="workspace-table-wrap">
-              <table id="workspace-table">
-                <thead><tr><th data-workspace-field="workspace.headers.0">Mês</th><th data-workspace-field="workspace.headers.1">Receita</th><th data-workspace-field="workspace.headers.2">Saldo</th></tr></thead>
-                <tbody>
-                  <tr><td data-workspace-field="workspace.rows.0.0">Jan</td><td data-workspace-field="workspace.rows.0.1">R$ 38.200</td><td data-workspace-field="workspace.rows.0.2">R$ 74.600</td></tr>
-                  <tr><td data-workspace-field="workspace.rows.1.0">Fev</td><td data-workspace-field="workspace.rows.1.1">R$ 41.500</td><td data-workspace-field="workspace.rows.1.2">R$ 81.900</td></tr>
-                  <tr><td data-workspace-field="workspace.rows.2.0">Mar</td><td data-workspace-field="workspace.rows.2.1">R$ 46.300</td><td data-workspace-field="workspace.rows.2.2">R$ 92.400</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </article>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
